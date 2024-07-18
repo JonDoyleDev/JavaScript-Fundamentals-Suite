@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="current-info">
+            
+            <div class="date-container">
+
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">AM</span>
+                </div>
+                
+                <div class="date" id="date">
+                    Monday July 16
+                </div>
+
+                <div class="today-forecast">
+                    <div class="today" id="current-temp">
+                        <img src="/images/Icon.webp" alt="weather-now-icon" id="today-icon">
+                        <div class="temp-now">45&#176 F</div>
+                    </div>
+                </div>
+
+                <div class="place-container">
+                    <div class="time-zone" id="time-zone"> <p id="location">City State Country</p></div>
+                </div>
+
+                <div class="others" id="current-weather-items">
+                    <div class="weather-items">
+                        <div>High / Low</div>
+                        <div>69 | 45</div>
+                    </div>
+
+                    <div class="weather-items">
+                        <div>Humidity</div>
+                        <div>20%</div>
+                    </div>
+                   
+                    <div class="weather-items">
+                        <div>Windspeed</div>
+                        <div>15 mph</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Sunday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Monday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Tuesday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Wednesday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+            <div class="weather-forecast-item">
+                <div class="day">Saturday</div>
+                <img src="/images/Icon.webp" alt="weather icon" class="w-icon">
+                <div class="temp">Day - 55&#176 F</div>
+                <div class="temp">Night - 32&#176 F</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/components/weather.js"></script>
+</body>
+</html>
