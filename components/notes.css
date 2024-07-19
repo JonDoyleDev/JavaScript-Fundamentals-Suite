@@ -1,0 +1,134 @@
+.container {
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 10px;
+    width: 100%;
+    color: whitesmoke;
+}
+
+.title button {
+    padding: 5px;
+    background: rgba(24, 24, 27, 0.6);
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    font-weight: 100;
+    width: 15%;
+    margin-left: 10px;
+}
+
+.note-list {
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    width: 100%;
+    font-weight: 100;
+}
+
+.note-list :hover { 
+    cursor: pointer;
+}
+
+.list-item {
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 100%;
+    color: whitesmoke;
+    list-style-type: none;
+}
+
+.list-item :hover {
+    border: 3px solid whitesmoke;
+    font-weight: 200;
+}
+
+.note-view { 
+    background: rgba(24, 24, 27, 1);
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    font-weight: 100;
+    padding: 10px 20px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    height: 85%;
+    /*visibility: hidden; */
+}
+
+#note-editor { 
+    margin: 20px 0;
+    background: rgba(24, 24, 27, 0.6);
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+}
+
+.note-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+#exit-btn {
+    border: #ccc;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    cursor: pointer;
+}
+
+#edit-container { 
+        width: 99%;
+        height: 65vh;
+        margin: 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+} 
+
+#edit-container textarea { 
+    height: 100%;
+    width: 100%;
+}
+
+.view-container button {
+    padding: 5px;
+    background: rgba(24, 24, 27, 0.6);
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    font-weight: 100;
+    width: 60px;
+}
+
+.hidden { 
+    visibility: hidden;
+}

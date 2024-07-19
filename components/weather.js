@@ -5,6 +5,8 @@ const timezoneEl = document.getElementById('time-zone');
 const currentTempEl = document.getElementById("current-temp");
 const locationEl = document.getElementById("location");
 const weatherForecastEl = document.getElementById('weather-forecast');
+const weatherAPI = "93ca171dab2a3eb1c5f5d46d9d24e11c";
+
 
 setInterval(() => {
     const time = new Date();
@@ -39,8 +41,37 @@ setInterval(() => {
     else if (daySuffixNum == 3){daySuffix = "rd"}
     else (daySuffix = "th");
 
-    dateEl.innerHTML = dayName + ' ' + monthName + ' ' + date + daySuffix;
+    dateEl.innerHTML = dayName + ', ' + monthName + ' ' + date + daySuffix;
 }, 1000);
 
+let positionData;
 
+function getWeatherData() {
+    navigator.geolocation.getCurrentPosition((position) => {
+        positionData = position;
+
+        let { latitude, longitude } = position.coords;
+
+        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&appid=${weatherAPI}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    }, (error) => {
+        console.error(error);
+    });
+}
+
+getWeatherData();
+
+setTimeout(() => {
+    if (positionData) {
+        console.log('Position data:', positionData);
+    } else {
+        console.log('Position data not available yet.');
+    }
+}, 1000);
 

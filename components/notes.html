@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/components/notes.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            Notes
+            <button>New Note</button>
+            <button>Menu</button>
+        </div>
+
+            <div class="note-list" id="note-list">
+                <div class="active-folder" id="active-folder-name">Folder Name</div>
+                <div class="list-items">
+                    <div class="list-item">Note Name</div>
+                    <div class="list-item">Note Name</div>
+                    <div class="list-item">Note Name</div>
+                    <div class="list-item">Note Name</div>
+                    <div class="list-item">Note Name</div>
+                    <div class="list-item">Note Name</div>
+                </div>
+            </div>
+
+      </div>
+
+        <div class="note-view" id="note-view">
+
+            <div class="view-container">
+                <div class="note-title" id="note-title">Note Title</div>
+                <button id="edit-note-button"> Edit</button>
+                <button id="clear-note-button"> Delete</button>
+            </div>
+
+            <div class="view-container" id="edit-container">
+                <textarea name="" id="note-editor" placeholder="Notes..."></textarea>
+            </div>
+        </div>
+
+</body>
+</html>

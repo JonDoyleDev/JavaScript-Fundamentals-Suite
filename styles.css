@@ -61,7 +61,7 @@ body {
     text-align: center;
     margin: 20px auto;
     width: 85%;
-    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-x: auto;
 }
 
 .weather-forecast-item {
