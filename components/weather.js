@@ -102,7 +102,3 @@ function showWeatherData(data) {
 }
 
 getWeatherData(); 
-
-
-
-//testing git changes (my commits are connected to my account...)

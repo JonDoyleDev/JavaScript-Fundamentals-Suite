@@ -13,8 +13,8 @@
         <button class="exit-btn">X</button>
         <div class="title">
             Notes
-            <button>New Note</button>
-            <button>Menu</button>
+            <button id="new-note-button">New Note</button>
+            <button id="menu-button">Menu</button>
         </div>
 
             <div class="note-list" id="note-list">
@@ -31,14 +31,14 @@
                 </div>
             </div>
 
-      </div>
+        </div>
 
-        <div class="note-view" id="note-view">
+        <div class="note-view hidden" id="note-view">
 
             <div class="view-container">
-                <div class="note-title" id="note-title">Note Title <button class="exit-btn">X</button></div>
-                <button id="edit-note-button"> Edit</button>
-                <button id="clear-note-button"> Delete</button>
+                <div class="note-title" id="note-title">Note Title <button class="exit-btn" id="exit-edit-button">X</button></div>
+                <button id="save-note-button">Save</button>
+                <button id="clear-note-button">Delete</button>
             </div>
 
             <div class="view-container" id="edit-container">
@@ -46,5 +46,6 @@
             </div>
         </div>
 
+    <script src="/components/notes.js"></script>
 </body>
 </html>
