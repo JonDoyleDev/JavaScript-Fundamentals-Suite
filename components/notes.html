@@ -10,6 +10,7 @@
 
 <body>
     <div class="container">
+        <button class="exit-btn">X</button>
         <div class="title">
             Notes
             <button>New Note</button>
@@ -19,12 +20,14 @@
             <div class="note-list" id="note-list">
                 <div class="active-folder" id="active-folder-name">Folder Name</div>
                 <div class="list-items">
-                    <div class="list-item">Note Name</div>
-                    <div class="list-item">Note Name</div>
-                    <div class="list-item">Note Name</div>
-                    <div class="list-item">Note Name</div>
-                    <div class="list-item">Note Name</div>
-                    <div class="list-item">Note Name</div>
+                    <ul>
+                        <li><div class="list-item">Note Name</div></li>
+                        <li><div class="list-item">Note Name</div></li>
+                        <li><div class="list-item">Note Name</div></li>
+                        <li><div class="list-item">Note Name</div></li>
+                        <li><div class="list-item">Note Name</div></li>
+                        <li><div class="list-item">Note Name</div></li>
+                    </ul>
                 </div>
             </div>
 
@@ -33,7 +36,7 @@
         <div class="note-view" id="note-view">
 
             <div class="view-container">
-                <div class="note-title" id="note-title">Note Title</div>
+                <div class="note-title" id="note-title">Note Title <button class="exit-btn">X</button></div>
                 <button id="edit-note-button"> Edit</button>
                 <button id="clear-note-button"> Delete</button>
             </div>

@@ -40,7 +40,7 @@ body {
 }
 
 .today-forecast img {
-    max-width: 30%;
+    max-width: 100%;
 }
 
 /* Weather items */
@@ -59,10 +59,30 @@ body {
     border-radius: 10px;
     border: 1px solid whitesmoke;
     text-align: center;
-    margin: 20px auto;
+    margin: 15px 0 50px 0;
     width: 85%;
     overflow-x: auto;
 }
+
+/* ===== Scrollbar CSS ===== */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px white ;
+  }
 
 .weather-forecast-item {
     flex: 1;
@@ -77,7 +97,7 @@ body {
 }
 
 .weather-forecast img {
-    max-width: 30%;
+    max-width: 60%;
     margin: 10px 0;
 }
 
@@ -111,6 +131,22 @@ body {
 
 .date-container #date {
     font-size: 20px;
+}
+
+.place-container button { 
+    background: none;
+    color: whitesmoke;
+    font-weight: 100;
+    font-family: 'Poppins';
+    opacity: 0.6;
+    box-shadow: none;
+    border: none;
+    font-size: small;
+}
+
+.place-container button:hover{ 
+    opacity: 1;
+    cursor: pointer;
 }
 
 /* Responsive styles */
