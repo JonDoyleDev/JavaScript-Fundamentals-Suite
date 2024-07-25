@@ -45,14 +45,13 @@
     list-style-type: none;
 }
 
-.note-list ul { 
+.note-list ul {
     list-style-type: none;
 }
 
-.note-list :hover { 
+.note-list :hover {
     cursor: pointer;
 }
-
 
 .list-item {
     border-radius: 10px;
@@ -69,7 +68,7 @@
     font-weight: 200;
 }
 
-.note-view { 
+.note-view {
     background: rgba(24, 24, 27, 1);
     border-radius: 10px;
     border: 1px solid whitesmoke;
@@ -81,18 +80,62 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 5%;
-    left: 0;
-    right: 0;
-    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    z-index: 1001;
 }
 
-#note-editor { 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.editor-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 10px;
+    width: 100%;
+    color: whitesmoke;
+    font-family: 'Poppins';
+}
+
+#editBtn, #deleteBtn {
+    background-color: black;
+    color: #fff;
+    border: 1px solid whitesmoke;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+#note-editor {
     margin: 20px 0;
     background: rgba(24, 24, 27, 0.6);
     color: whitesmoke;
     font-family: "Poppins", sans-serif;
     padding: 5px;
+    width: 85%;
+    height: 85%;
+}
+
+textarea {
+    resize: none;
 }
 
 .note-title {
@@ -110,20 +153,24 @@
     color: whitesmoke;
 }
 
-#edit-container { 
-        width: 99%;
-        height: 65vh;
-        margin: 20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-} 
+#edit-container {
+    width: 99%;
+    height: 65vh;
+    margin: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-#edit-container textarea { 
+#edit-container textarea {
     height: 100%;
     width: 100%;
+}
+
+.view-container {
+    text-align: center;
 }
 
 .view-container button {
@@ -136,8 +183,9 @@
     cursor: pointer;
     font-weight: 100;
     width: 60px;
+    margin-top: 10px;
 }
 
-.hidden { 
-    visibility: hidden;
+.hidden {
+    display: none;
 }
