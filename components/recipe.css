@@ -10,8 +10,8 @@
 }
 
 .recipe-title { 
-    font-weight: 100;
-    font-size: 25px;
+    font-weight: 200;
+    font-size: 15px; 
     margin-top: 5px;
 }
 
@@ -97,4 +97,6 @@ section {
     padding: 5px;
     border-radius: 15px;
     margin-top: 15px;
+    font-weight: 100;
+    font-size: 12px;
 }

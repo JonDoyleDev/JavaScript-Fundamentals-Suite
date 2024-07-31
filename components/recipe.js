@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('#search-form');
     const submitButton = document.querySelector('button[type="submit"]');
-    const searchResultContainer = document.querySelector('.search-result'); // Container to display recipes
+    const searchResultContainer = document.querySelector('.search-result');
 
     submitButton.addEventListener('click', async function(event) {
         event.preventDefault();
@@ -22,10 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchResponse = await fetch(searchUrl, options);
             const searchData = await searchResponse.json();
 
-            // Clear previous search results
             searchResultContainer.innerHTML = '';
 
-            // Process each recipe
             for (const recipe of searchData.results) {
                 const recipeId = recipe.id;
                 const recipeDetailsUrl = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${recipeId}/information`;
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const detailsResponse = await fetch(recipeDetailsUrl, options);
                 const recipeDetails = await detailsResponse.json();
 
-                // Create HTML for each recipe
                 const recipeHTML = `
                     <div class="result-items">
                         <img class="recipe-img" src="${recipeDetails.image}" alt="${recipeDetails.title}">
@@ -47,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
 
-                // Append recipe HTML to the container
                 searchResultContainer.insertAdjacentHTML('beforeend', recipeHTML);
             }
         } catch (error) {
