@@ -146,11 +146,15 @@ textarea {
 .exit-btn {
     border: none;
     position: absolute;
-    top: 7%;
+    top: 5%;
     right: 4%;
     cursor: pointer;
     background: none;
     color: whitesmoke;
+}
+
+#exit-edit-button { 
+    top: 2%;
 }
 
 #edit-container {
@@ -188,4 +192,17 @@ textarea {
 
 .hidden {
     display: none;
+}
+
+input {
+    :focus, .form-control:active {
+        background: transparent;
+    }
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
 }
