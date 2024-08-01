@@ -1,0 +1,78 @@
+.brand {
+    text-align: center;
+    padding: 20px;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.nav-bar { 
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.nav-bar button {
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins';
+}
+
+.nav-bar button:hover {
+    background-color: whitesmoke;
+    opacity: 0.5;
+    color: black;
+}
+
+.nav-bar button.selected {
+    background-color: whitesmoke;
+    color: black; 
+    }
+
+.news-list { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; 
+    padding: 16px;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: whitesmoke;
+}
+
+.news-item {
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.news-item img {
+    width: 100%;
+    max-height:  70%;
+    border-radius: 10px;
+}
+
+.news-item a {
+    margin-top: 8px ;
+    color: black;
+    text-decoration: none;
+}
+
+.news-item a:hover { 
+    color: blue;
+}
+
+
+@media (max-width: 1200px) {
+    .news-item {
+        flex: 1 1 calc(50% - 32px);     
+    }
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        flex: 1 1 100%;
+    }
+}
