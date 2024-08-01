@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKeyNews = ''; 
-    const apiKeyUnsplash = ''; 
+    const apiKeyNews = 'f587118ebb334dd184053d1ed6dcd1e5'; 
+    const apiKeyUnsplash = '7xU0k4aZoCqfVGc6f-PKBgOB_qloMdS87r2EU4CRK5k'; 
     const newsList = document.querySelector('.news-list');
     const buttons = document.querySelectorAll('.nav-bar button');
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Hard to say how much of a difference this function makes but its an attempt to get more article images by extracting keywords from the title, and pulling images from Upsplash
     function extractKeywords(title) {
-        const stopWords = new Set(['the', 'and', 'is', 'in', 'at', 'of', 'to']); 
+        const stopWords = new Set(['the', 'and', 'is', 'in', 'at', 'of', 'to', 'The Washington Post']); 
         return title
             .toLowerCase()
             .replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, '')

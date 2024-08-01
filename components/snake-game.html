@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./snake-game.css">
+</head>
+<body>
+    
+    <div class="title">
+        Snake Game
+    </div>
+    
+    <div class="start-menu">
+            <img id="logo-img" src="/images/snek-logo.jpeg" alt="">
+            <button id="start-button">Start Game</button>
+    </div>
+
+    <div class="game-container">
+        <canvas class="hidden" id="board"></canvas>
+    </div>
+
+    <div id="reload-game" class="hidden">
+        <h1> Game Over!</h1>
+        <button id="reload-button">Reload?</button>
+    </div>
+<script src="./snake-game.js"></script>
+</body>
+</html>
