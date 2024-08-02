@@ -4,10 +4,95 @@
     text-align: center;
 }
 
+#time { 
+    font-size: 50px;
+    font-weight: 100;
+    color: #61dafb;
+}
+
+#alarm-clock { 
+    text-align: center;
+    padding: 50px;
+}
+
+#alarm-title { 
+    font-size: 50px;
+    font-weight: 100;
+    color: #61dafb;
+}
+
+#alarm-list-item { 
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: 35px;
+    list-style: none;
+}
+
+.alarm-buttons button { 
+    background-color: #61dafb;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #282c34; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#new-alarm-button { 
+    background-color: #61dafb;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #282c34; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#timer-title { 
+    font-size: 50px;
+    font-weight: 100;
+    color: #61dafb;
+}
+
 #timer-container { 
     padding: 50px;
-    border: 1px solid whitesmoke;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto;
 }
+
+#timer {
+    font-size: 3em; 
+    margin: 20px 0;
+    color: #61dafb;
+}
+
+#timer-container button { 
+    background-color: #61dafb;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #282c34; 
+    font-size: 1em; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+#timer-container button:hover {
+    background-color: #21a1f1; 
+    color: #ffffff;
+}
+
+#timer-container button:active {
+    background-color: #1a91d1; 
+    color: #ffffff;
+}
+
 
 #alarm-clock { 
     padding: 50px;

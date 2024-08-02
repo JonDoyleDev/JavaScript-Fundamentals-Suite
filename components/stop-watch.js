@@ -52,3 +52,44 @@ navigator.geolocation.getCurrentPosition(
         document.getElementById('location').innerHTML = 'Unable to retrieve location.';
     }
 );
+
+// STOP-WATCH
+
+let timerInterval;
+let seconds = 0;
+
+function updateTimer() {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    document.getElementById('timer').textContent = 
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+function startTimer() {
+    if (!timerInterval) {
+        timerInterval = setInterval(() => {
+            seconds++;
+            updateTimer();
+        }, 1000);
+    }
+}
+
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+function resetTimer() {
+    stopTimer();
+    seconds = 0;
+    updateTimer();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('start-button').addEventListener('click', startTimer);
+    document.getElementById('stop-button').addEventListener('click', stopTimer);
+    document.getElementById('reset-button').addEventListener('click', resetTimer);
+});
