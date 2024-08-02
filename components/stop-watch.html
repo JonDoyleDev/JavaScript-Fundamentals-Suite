@@ -12,39 +12,51 @@
     <div id="clock">
         <div id="time">12:00</div>
         <div id="location">Location Loading</div>
+        <button id="alarm-tab">Alarm</button>        
+        <button id="stopwatch-tab">Stop Watch</button>
+        <button id="timer-tab">Timer</button>   
+
     </div>
 
-    <div id="alarm-clock">
-        <div id="alarm-title">Alarms<button id="new-alarm-button">New Alarm</button></div>
-        <div class="alarm-list">
+    <div class="hidden" id="alarm-clock">
+        <div id="alarm-container">
+            <div id="alarm-title">
+                Alarms
+                <button id="new-alarm">Plus Icon</button>
+            </div>
 
-            <ul id="alarm-list-item">
-                <li>7:00AM</li>
-                <div class="alarm-buttons">
-                    <button>edit icon</button>
-                    <button>delete icon</button>
-                    <button>on/off slider?</button>
+            <div id="alarm-settings" class="hidden">
+                <label for="alarm-time">Alarm Time:</label>
+                <input type="time" id="alarm-time">
+                <button id="set-alarm">Submit</button>
+            </div>
+        
+            <div class="alarm-list">
+                <ul id="alarm-list"></ul>
+            </div>
+            <h2 id="alarm-status"></h2>
+        </div>
+        
+        <div id="edit-modal" class="modal hidden">
+            <div id="modal-content">
+                <div id="modal-header">
+                    Edit Alarm
                 </div>
-
-                <li>7:15AM</li>
-                <div class="alarm-buttons">
-                    <button>edit icon</button>
-                    <button>delete icon</button>
-                    <button>on/off slider?</button>
+                <div id="modal-body">
+                    <label for="edit-time">New Alarm Time:</label>
+                    <input type="time" id="edit-time">
                 </div>
-                <li>7:30AM</li>
-                <div class="alarm-buttons">
-                    <button>edit icon</button>
-                    <button>delete icon</button>
-                    <button>on/off slider?</button>
+                <div id="modal-footer">
+                    <button id="save-edit" class="modal-button">Save</button>
+                    <button id="cancel-edit" class="modal-button">Cancel</button>
                 </div>
-            </ul>
+            </div>
         </div>
     </div>
 
-    <div id="timer-container">
-        <div id="timer-title">Timer</div>
-        <div id="timer">00:00:00</div>
+    <div class="hidden" id="stop-watch-container">
+        <div id="stop-watch-title">Stop Watch</div>
+        <div id="stop-watch">00:00:00</div>
         <button id="stop-button">Stop</button>
         <button id="start-button">Start</button>
         <button id="reset-button">Reset</button>

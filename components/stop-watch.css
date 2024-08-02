@@ -1,6 +1,5 @@
 #clock { 
     padding: 50px;
-    border: 1px solid whitesmoke;
     text-align: center;
 }
 
@@ -10,25 +9,7 @@
     color: #61dafb;
 }
 
-#alarm-clock { 
-    text-align: center;
-    padding: 50px;
-}
-
-#alarm-title { 
-    font-size: 50px;
-    font-weight: 100;
-    color: #61dafb;
-}
-
-#alarm-list-item { 
-    color: whitesmoke;
-    font-weight: 100;
-    font-size: 35px;
-    list-style: none;
-}
-
-.alarm-buttons button { 
+#clock button {
     background-color: #61dafb;
     border: 1px solid #282c34;
     border-radius: 5px;
@@ -37,40 +18,117 @@
     margin: 5px; 
     cursor: pointer; 
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins';
 }
 
-#new-alarm-button { 
-    background-color: #61dafb;
-    border: 1px solid #282c34;
-    border-radius: 5px;
-    color: #282c34; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    transition: background-color 0.3s, color 0.3s;
+#clock button:active { 
+    background-color: #1a91d1;
 }
 
-#timer-title { 
+#alarm-clock { 
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#alarm-title { 
     font-size: 50px;
     font-weight: 100;
     color: #61dafb;
 }
 
-#timer-container { 
-    padding: 50px;
+#modal-header { 
+    font-size: 40px;
+    font-weight: 100;
+    color: #61dafb;
+    padding: 10px;
+}
+
+label { 
+    background-color: black;
+    color: #61dafb;
+    font-family: 'Poppins';
+    font-weight: 100;
+}
+
+#alarm-list { 
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: 35px;
+    list-style: none;
+}
+
+#alarm-clock button  { 
+    background-color: #61dafb;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #282c34; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins';
+}
+
+#alarm-clock input{
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+    
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%)
+}
+
+#edit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 10px 0;
+    max-width: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+}
+
+#modal-body {
+    padding: 20px;
+    font-size: 25px;
+}
+
+#stop-watch-title { 
+    font-size: 50px;
+    font-weight: 100;
+    color: #61dafb;
+}
+
+#stop-watch-container { 
+    padding: 10px;
     text-align: center;
     background-color: black;
-    border-radius: 10px;
-    max-width: 300px;
     margin: 0 auto;
 }
 
-#timer {
+#stop-watch {
     font-size: 3em; 
     margin: 20px 0;
     color: #61dafb;
 }
 
-#timer-container button { 
+#stop-watch-container button { 
     background-color: #61dafb;
     border: 1px solid #282c34;
     border-radius: 5px;
@@ -83,18 +141,16 @@
 }
 
 
-#timer-container button:hover {
+#stop-watch-container button:hover {
     background-color: #21a1f1; 
     color: #ffffff;
 }
 
-#timer-container button:active {
+#stop-watch-container button:active {
     background-color: #1a91d1; 
     color: #ffffff;
 }
 
-
-#alarm-clock { 
-    padding: 50px;
-    border: 1px solid whitesmoke;
+.hidden { 
+    display: none;
 }
