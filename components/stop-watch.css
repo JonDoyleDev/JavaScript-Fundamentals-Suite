@@ -1,6 +1,7 @@
 #clock { 
     padding: 50px;
     border: 1px solid whitesmoke;
+    text-align: center;
 }
 
 #timer-container { 
