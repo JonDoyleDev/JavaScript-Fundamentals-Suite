@@ -28,25 +28,32 @@ function updateTime() {
     const timeDiv = document.getElementById('time');
     const now = new Date();
     let hours = now.getHours();
+    console.log('raw hours: ', hours);
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const period = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     hours = hours ? hours : 12;
     const formattedHours = hours.toString();
     timeDiv.textContent = `${formattedHours}:${minutes} ${period}`;
+    console.log("Time: ", formattedHours, ":", minutes);
 }
 
 function displayLocalTime() {
+    console.log('displayLocal called')
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(() => {
+            console.log('navigator working');
             updateTime();
+            ('updateTime called')
             setInterval(updateTime, 1000);
         }, (error) => {
             document.getElementById('time').textContent = 'Time Loading...';
         });
     } else {
         document.getElementById('time').textContent = 'Oops Clocks Broke :(';
+        console.log('navigator not working')
     }
+    console.log('Exiting displayLocalTime');
 }
 
 displayLocalTime();
@@ -134,7 +141,7 @@ const newAlarmButton = document.getElementById('new-alarm');
 let alarms = [];
 let editingIndex = null;
 
-function updateTime() {
+function checkTime() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -207,7 +214,7 @@ saveEditButton.addEventListener('click', editAlarm);
 cancelEditButton.addEventListener('click', hideEditModal);
 newAlarmButton.addEventListener('click', showAdd);
 
-setInterval(updateTime, 1000);
+setInterval(checkTime, 1000);
 
 window.showEditModal = showEditModal;
 window.deleteAlarm = deleteAlarm;
