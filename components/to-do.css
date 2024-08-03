@@ -1,0 +1,110 @@
+* { 
+    text-align: center;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+#title { 
+    font-size: 50px;
+    font-weight: 100;
+    color: whitesmoke;
+    margin: 20px 0;
+}
+
+input { 
+    background-color: black;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+#add-task-button {
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+#add-task-button:hover {
+    background-color: darkgray;
+}
+
+.list-container { 
+    display: inline-block;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: black;
+    border: 1px solid whitesmoke;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+
+li span {
+    grid-column: 1 / 2; 
+}
+
+.delete-btn,
+.edit-btn,
+.complete-btn {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.edit-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid whitesmoke;
+}
+
+.delete-btn {
+    background-color: red;
+    color: whitesmoke;
+}
+
+.complete-btn {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.edit-btn:hover {
+    background-color: grey;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.complete-btn:hover {
+    background-color: darkgreen;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
