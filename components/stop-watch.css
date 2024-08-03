@@ -151,6 +151,74 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: #ffffff;
 }
 
+/* TIMER*/
+#timer-title {
+    font-size: 50px;
+    font-weight: 100;
+    color: #61dafb;
+}
+
+#timer-container {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    margin: 0 auto;
+}
+
+#timer {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #61dafb;
+}
+
+#timer-container button {
+    background-color: #61dafb;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #282c34;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#timer-container button:hover {
+    background-color: #21a1f1;
+    color: #ffffff;
+}
+
+#timer-container button:active {
+    background-color: #1a91d1;
+    color: #ffffff;
+}
+
+#timer-container input { 
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#time-picker { 
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 10px 0;
+    max-width: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+    height: 90px;
+}
+
 .hidden { 
     display: none;
 }

@@ -61,6 +61,21 @@
         <button id="reset-button">Reset</button>
     </div>
 
+    <div id="timer-container">
+        <div id="timer-title">Timer</div>
+        <div id="time-picker" class="hidden">
+            <input type="number" id="hours" placeholder="H" min="0" max="99" step="1">
+            <span>:</span>
+            <input type="number" id="minutes" placeholder="M" min="0" max="59" step="1">
+            <span>:</span>
+            <input type="number" id="seconds" placeholder="S" min="0" max="59" step="1">
+            <button id="set-timer">Submit</button>
+        </div>
+        <div id="timer">00:00:00</div>
+        <button id="start-countdown-button">Start</button>
+        <button id="stop-countdown-button">Stop</button>
+    </div>
+
     <script src="./stop-watch.js"></script>
 </body>
 </html>

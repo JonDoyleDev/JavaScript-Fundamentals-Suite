@@ -5,23 +5,29 @@ const timerTab = document.getElementById('timer-tab');
 const clockEl = document.getElementById('clock');
 const alarmsEl = document.getElementById('alarm-clock');
 const stopWatchEl = document.getElementById('stop-watch-container');
-
+const timerEl = document.getElementById('timer-container');
 
 function showAlarm() { 
     alarmsEl.classList.remove('hidden');
     stopWatchEl.classList.add('hidden');
-    //timer
+    timerEl.classList.add('hidden');
 }
 
 function showStopWatch() { 
     alarmsEl.classList.add('hidden');
     stopWatchEl.classList.remove('hidden');
-    // timer
+    timerEl.classList.add('hidden');
+}
+
+function showTimer() { 
+    alarmsEl.classList.add('hidden');
+    stopWatchEl.classList.add('hidden');
+    timerEl.classList.remove('hidden');
 }
 
 alarmTab.addEventListener('click', showAlarm);
 stopWatchTab.addEventListener('click', showStopWatch);
-
+timerTab.addEventListener('click', showTimer);
 
 // CLOCK
 function updateTime() {
@@ -150,7 +156,12 @@ function checkTime() {
         const [alarmHours, alarmMinutes] = alarm.time.split(':');
         if (hours === alarmHours && minutes === alarmMinutes) {
             alarmStatus.textContent = `Alarm ringing for ${alarm.time}!`;
-            new Audio('/audio/alarm.mp3').play();
+            const audio = new Audio('/audio/alarm.mp3').play();
+            audio.play();
+            setTimeout(() => {
+                audio.pause();
+                audio.currentTime = 0;
+            }, 2000);
         }
     });
 }
@@ -220,3 +231,76 @@ window.showEditModal = showEditModal;
 window.deleteAlarm = deleteAlarm;
 
 // TIMER
+let timerHours = 0;
+let timerMinutes = 0;
+let timerSeconds = 0;
+let countdownInterval;
+
+const timerDisplay = document.getElementById('timer');
+const startButton = document.getElementById('start-countdown-button');
+const stopButton = document.getElementById('stop-countdown-button');
+const hoursInput = document.getElementById('hours');
+const minutesInput = document.getElementById('minutes');
+const secondsInput = document.getElementById('seconds');
+const setTimerBtn = document.getElementById('set-timer');
+const timePicker = document.getElementById('time-picker');
+
+function updateTimerDisplay() {
+    const hours = String(timerHours).padStart(2, '0');
+    const minutes = String(timerMinutes).padStart(2, '0');
+    const seconds = String(timerSeconds).padStart(2, '0');
+    timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+function setCountdown() {
+    timerHours = parseInt(hoursInput.value) || 0;
+    timerMinutes = parseInt(minutesInput.value) || 0;
+    timerSeconds = parseInt(secondsInput.value) || 0;
+    
+    timePicker.classList.add('hidden');
+    updateTimerDisplay();
+}
+
+function showTimePicker() { 
+    timePicker.classList.remove('hidden');
+}
+
+function onCountdownEnd() {
+    const audio = new Audio('/audio/alarm.mp3').play();
+    audio.play();
+    setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0; 
+    }, 2000);
+}
+
+function startCountdown() {
+    countdownInterval = setInterval(() => {
+        if (timerSeconds > 0) {
+            timerSeconds--;
+        } else if (timerMinutes > 0) {
+            timerSeconds = 59;
+            timerMinutes--;
+        } else if (timerHours > 0) {
+            timerMinutes = 59;
+            timerSeconds = 59;
+            timerHours--;
+        } else {
+            clearInterval(countdownInterval);
+            onCountdownEnd();
+        }
+        updateTimerDisplay();
+    }, 1000);
+}
+
+function stopCountdown() {
+    clearInterval(countdownInterval);
+}
+
+startButton.addEventListener('click', startCountdown);
+stopButton.addEventListener('click', stopCountdown);
+setTimerBtn.addEventListener('click', setCountdown);
+timerDisplay.addEventListener('click', showTimePicker);
+
+updateTimerDisplay();
+
