@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: bla;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calendar-container {
+    width: 90%;
+    max-width: 600px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.day:hover .notes {
+    display: block;
+}
+
+.notes {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    font-size: 0.8em;
+    color: #333;
+}
+
+#note-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#note-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#save-note {
+    padding: 5px 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#save-note:hover {
+    background-color: #218838;
+}
