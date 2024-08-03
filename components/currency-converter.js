@@ -1,5 +1,3 @@
-// currency-converter.js
-
 const apiKey = 'API-KEY';
 const apiUrl = 'https://v6.exchangerate-api.com/v6/';
 
@@ -9,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function populateCurrencyOptions() {
-    const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'NZD']; // Add more as needed
+    const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'NZD']; 
     const select1 = document.getElementById('currency1-select');
     const select2 = document.getElementById('currency2-select');
 
