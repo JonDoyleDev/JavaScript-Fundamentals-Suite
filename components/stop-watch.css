@@ -6,23 +6,29 @@
 #time { 
     font-size: 50px;
     font-weight: 100;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #clock button {
-    background-color: #61dafb;
-    border: 1px solid #282c34;
-    border-radius: 5px;
-    color: #282c34; 
+    background-color: black;
+    border-radius: 10px;
+    color: whitesmoke; 
     padding: 10px 20px; 
     margin: 5px; 
     cursor: pointer; 
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Poppins';
+    border: 1px solid whitesmoke;
 }
 
 #clock button:active { 
-    background-color: #1a91d1;
+    background-color: whitesmoke;
+}
+
+#clock button:hover { 
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid whitesmoke;
 }
 
 #alarm-clock { 
@@ -37,19 +43,19 @@
 #alarm-title { 
     font-size: 50px;
     font-weight: 100;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #modal-header { 
     font-size: 40px;
     font-weight: 100;
-    color: #61dafb;
+    color: whitesmoke;
     padding: 10px;
 }
 
 label { 
     background-color: black;
-    color: #61dafb;
+    color: whitesmoke;
     font-family: 'Poppins';
     font-weight: 100;
 }
@@ -62,9 +68,9 @@ label {
 }
 
 #alarm-clock button  { 
-    background-color: #61dafb;
-    border: 1px solid #282c34;
-    border-radius: 5px;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
     color: #282c34; 
     padding: 10px 20px; 
     margin: 5px; 
@@ -73,12 +79,18 @@ label {
     font-family: 'Poppins';
 }
 
+#alarm-clock button:hover { 
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid whitesmoke;
+}
+
 #alarm-clock input{
     background-color: black;
     color: whitesmoke;
     border: 1px solid whitesmoke;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-left: 10px;
     
 }
@@ -104,6 +116,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     z-index: 1000;
 }
 
+#edit-modal button:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid whitesmoke;
+}
+
 #modal-body {
     padding: 20px;
     font-size: 25px;
@@ -112,7 +130,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 #stop-watch-title { 
     font-size: 50px;
     font-weight: 100;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #stop-watch-container { 
@@ -125,14 +143,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 #stop-watch {
     font-size: 3em; 
     margin: 20px 0;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #stop-watch-container button { 
-    background-color: #61dafb;
-    border: 1px solid #282c34;
-    border-radius: 5px;
-    color: #282c34; 
+    background-color: black;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: white; 
     font-size: 1em; 
     padding: 10px 20px; 
     margin: 5px; 
@@ -140,22 +158,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
-#stop-watch-container button:hover {
-    background-color: #21a1f1; 
-    color: #ffffff;
-}
-
 #stop-watch-container button:active {
-    background-color: #1a91d1; 
-    color: #ffffff;
+    background-color: whitesmoke; 
+    color: black;
 }
 
 /* TIMER*/
 #timer-title {
     font-size: 50px;
     font-weight: 100;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #timer-container {
@@ -168,14 +180,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 #timer {
     font-size: 3em;
     margin: 20px 0;
-    color: #61dafb;
+    color: whitesmoke;
 }
 
 #timer-container button {
-    background-color: #61dafb;
-    border: 1px solid #282c34;
-    border-radius: 5px;
-    color: #282c34;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: whitesmoke;
     font-size: 1em;
     padding: 10px 20px;
     margin: 5px;
@@ -198,7 +210,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: whitesmoke;
     border: 1px solid whitesmoke;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #time-picker { 
