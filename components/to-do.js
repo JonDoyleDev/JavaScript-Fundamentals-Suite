@@ -56,3 +56,7 @@ taskInput.addEventListener('keypress', function (e) {
         addTask();
     }
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

@@ -304,3 +304,6 @@ timerDisplay.addEventListener('click', showTimePicker);
 
 updateTimerDisplay();
 
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

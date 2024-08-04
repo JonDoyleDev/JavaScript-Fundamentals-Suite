@@ -53,3 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     renderCalendar();
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

@@ -104,3 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     fetchNews('general', { latitude: 37.7749, longitude: -122.4194 }); // Default
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

@@ -102,3 +102,7 @@ function showWeatherData(data) {
 }
 
 getWeatherData(); 
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

@@ -83,3 +83,7 @@ function deleteNote(id) {
 }
 
 window.onload = displayNotes;
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

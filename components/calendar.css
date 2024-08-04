@@ -1,10 +1,11 @@
 body {
     font-family: 'Poppins';
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 button { 
@@ -28,7 +29,7 @@ button:hover{
 }
 
 #calendar {
-    width: 800px;
+    max-width: 800px;
 }
 
 #month {

@@ -1,6 +1,9 @@
 const keys = document.querySelectorAll('.key');
 const display_input = document.querySelector('.display .input');
 const display_output = document.querySelector('.display .output');
+const appLogo = document.getElementById('home');
+
+addEventListener.appLogo('click',)
 
 let input = "";
 
@@ -122,4 +125,8 @@ function PerpareInput (input) {
 	}
 
 	return input_array.join("");
+}
+
+function openIndexPage() {
+    window.location.href = '/index.html';
 }

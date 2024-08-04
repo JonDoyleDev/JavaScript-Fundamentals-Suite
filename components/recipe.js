@@ -51,3 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

@@ -45,3 +45,7 @@ async function convertCurrency() {
         console.error('Error fetching exchange rates:', error);
     }
 }
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

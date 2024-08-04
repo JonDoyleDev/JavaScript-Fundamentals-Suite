@@ -69,3 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     renderContacts();
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}

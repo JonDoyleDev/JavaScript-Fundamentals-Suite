@@ -101,3 +101,7 @@ function placeFood() {
 document.getElementById('reload-button').addEventListener('click', () => {
     location.reload();
 });
+
+function openIndexPage() {
+    window.location.href = '/index.html';
+}
