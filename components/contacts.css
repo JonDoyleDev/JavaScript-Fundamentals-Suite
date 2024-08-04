@@ -10,6 +10,8 @@ body {
     height: 100vh;
     margin: 0;
     background: black;
+    display: flex;
+    flex-direction: column;
 }
 
 #app {
