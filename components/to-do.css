@@ -74,34 +74,14 @@ li span {
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-}
-
-.edit-btn {
     background-color: black;
     color: white;
     border: 1px solid whitesmoke;
 }
 
-.delete-btn {
-    background-color: red;
-    color: whitesmoke;
-}
-
-.complete-btn {
-    background-color: green;
-    color: whitesmoke;
-}
-
-.edit-btn:hover {
-    background-color: grey;
-}
-
-.delete-btn:hover {
-    background-color: darkred;
-}
-
-.complete-btn:hover {
-    background-color: darkgreen;
+.edit-btn:hover, .delete-btn:hover, .complete-btn:hover {
+    background-color: whitesmoke;
+    color: black;
 }
 
 .completed {

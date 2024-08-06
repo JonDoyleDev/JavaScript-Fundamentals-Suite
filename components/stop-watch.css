@@ -1,105 +1,79 @@
-#clock { 
-    padding: 50px;
-    text-align: center;
+body, label, input, button {
+    font-family: 'Poppins';
+    color: whitesmoke;
+    font-weight: 100;
+    background-color: black;
 }
 
-#time { 
-    font-size: 50px;
-    font-weight: 100;
+#clock, #alarm-clock, #stop-watch-container, #timer-container {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    margin: 0 auto;
     color: whitesmoke;
 }
 
-#clock button {
+button {
     background-color: black;
     border-radius: 10px;
-    color: whitesmoke; 
-    padding: 10px 20px; 
-    margin: 5px; 
-    cursor: pointer; 
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-family: 'Poppins';
     border: 1px solid whitesmoke;
 }
 
-#clock button:active { 
-    background-color: whitesmoke;
-}
-
-#clock button:hover { 
+button:hover, #edit-modal button:hover, #alarm-clock button:hover, #stop-watch-container button:hover {
     background-color: whitesmoke;
     color: black;
     border: 1px solid whitesmoke;
+    font-weight: normal;
 }
 
-#alarm-clock { 
-    text-align: center;
-    padding: 5px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+button:active, #clock button:active, #stop-watch-container button:active {
+    background-color: whitesmoke;
+    color: black;
 }
 
-
-#alarm-title { 
+#time, #alarm-title, #modal-header, #stop-watch-title, #timer-title {
     font-size: 50px;
     font-weight: 100;
     color: whitesmoke;
 }
 
-#modal-header { 
-    font-size: 40px;
-    font-weight: 100;
-    color: whitesmoke;
-    padding: 10px;
-}
-
-label { 
-    background-color: black;
-    color: whitesmoke;
-    font-family: 'Poppins';
-    font-weight: 100;
-}
-
-#alarm-list { 
-    color: whitesmoke;
-    font-weight: 100;
+#alarm-list {
     font-size: 35px;
     list-style: none;
 }
 
-#alarm-clock button  { 
-    background-color: whitesmoke;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    color: #282c34; 
-    padding: 10px 20px; 
-    margin: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s, color 0.3s;
-    font-family: 'Poppins';
-}
-
-#alarm-clock button:hover { 
-    background-color: whitesmoke;
-    color: black;
-    border: 1px solid whitesmoke;
-}
-
-#alarm-clock input{
-    background-color: black;
-    color: whitesmoke;
-    border: 1px solid whitesmoke;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-    
-}
-
 input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(100%)
+    filter: invert(100%);
 }
 
-#edit-modal {
+.hidden {
+    display: none;
+}
+
+/* Specific Styles */
+#clock {
+    padding: 50px;
+}
+
+#time {
+    font-size: 50px;
+}
+
+#alarm-clock {
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-header {
+    font-size: 40px;
+    padding: 10px;
+}
+
+#edit-modal, #time-picker {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -112,14 +86,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     max-width: 500px;
     width: 100%;
     background-color: black;
-    color: white;
     z-index: 1000;
-}
-
-#edit-modal button:hover {
-    background-color: whitesmoke;
-    color: black;
-    border: 1px solid whitesmoke;
 }
 
 #modal-body {
@@ -127,110 +94,29 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-size: 25px;
 }
 
-#stop-watch-title { 
-    font-size: 50px;
-    font-weight: 100;
-    color: whitesmoke;
+#stop-watch-container button, #timer-container button {
+    font-size: 1em;
 }
 
-#stop-watch-container { 
-    padding: 10px;
-    text-align: center;
-    background-color: black;
-    margin: 0 auto;
-}
-
-#stop-watch {
-    font-size: 3em; 
-    margin: 20px 0;
-    color: whitesmoke;
-}
-
-#stop-watch-container button { 
-    background-color: black;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    color: white; 
-    font-size: 1em; 
-    padding: 10px 20px; 
-    margin: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#stop-watch-container button:active {
-    background-color: whitesmoke; 
+#timer-container button:hover {
+    background-color: whitesmoke;
     color: black;
+    font-weight: normal;
 }
 
-/* TIMER*/
-#timer-title {
-    font-size: 50px;
-    font-weight: 100;
-    color: whitesmoke;
-}
-
-#timer-container {
+#alarm-clock input, #timer-container input {
     padding: 10px;
-    text-align: center;
-    background-color: black;
-    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
 }
 
-#timer {
+#stop-watch, #timer {
     font-size: 3em;
     margin: 20px 0;
     color: whitesmoke;
 }
 
-#timer-container button {
-    background-color: black;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    color: whitesmoke;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#timer-container button:hover {
-    background-color: #21a1f1;
-    color: #ffffff;
-}
-
-#timer-container button:active {
-    background-color: #1a91d1;
-    color: #ffffff;
-}
-
-#timer-container input { 
-    background-color: black;
-    color: whitesmoke;
-    border: 1px solid whitesmoke;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-#time-picker { 
-    position: fixed;
+#time-picker {
     top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    align-items: center;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    padding: 10px 0;
-    max-width: 500px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    z-index: 1000;
     height: 90px;
-}
-
-.hidden { 
-    display: none;
 }

@@ -82,10 +82,17 @@ body {
 }
 
 #contact-list .remove-btn {
-    background: #e74c3c;
+    background: black;
     color: white;
-    border: none;
+    border: 1px solid whitesmoke;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 4px;
 }
+
+#contact-list .remove-btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: ease-in;
+}
+

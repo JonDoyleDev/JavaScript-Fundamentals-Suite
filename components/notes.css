@@ -1,3 +1,19 @@
+button { 
+    color: whitesmoke;
+    background-color: black;
+}
+
+#exit-edit-button, #save-note-button {
+    color: whitesmoke;
+    background-color: black;
+}
+
+#exit-edit-button:hover, #save-note-button:hover {
+    color: black;
+    background-color: whitesmoke;
+    font-weight: normal;
+}
+
 .container {
     margin: 10px 40px;
     display: flex;
@@ -20,22 +36,26 @@
 
 .title button {
     padding: 5px;
-    background: rgba(24, 24, 27, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     border: 1px solid whitesmoke;
     cursor: pointer;
-    font-weight: 100;
     width: 15%;
     margin-left: 20px;
     margin-top: 10px;
 }
 
+.title button:hover { 
+    background-color: whitesmoke;
+    color: black;
+}
+
 .note-list {
     display: flex;
     flex-direction: column;
-    background: rgba(24, 24, 27, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     border: 1px solid whitesmoke;
     padding: 20px;
@@ -69,7 +89,7 @@
 }
 
 .note-view {
-    background: rgba(24, 24, 27, 1);
+    background: rgba(0, 0, 0, 1);
     border-radius: 10px;
     border: 1px solid whitesmoke;
     font-weight: 100;
@@ -114,19 +134,25 @@
 
 #editBtn, #deleteBtn {
     background-color: black;
-    color: #fff;
+    color: whitesmoke;
     border: 1px solid whitesmoke;
-    padding: 5px 10px;
+    padding:10px;
     margin: 0 5px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 12px;
     width: 60px;
+    margin-top: 10px;
+}
+
+#editBtn:hover, #deleteBtn:hover {
+    color: black;
+    background-color: whitesmoke;
 }
 
 #note-editor {
     margin: 20px 0;
-    background: rgba(24, 24, 27, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: whitesmoke;
     font-family: "Poppins", sans-serif;
     padding: 5px;
@@ -179,7 +205,7 @@ textarea {
 
 .view-container button {
     padding: 5px;
-    background: rgba(24, 24, 27, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
@@ -188,6 +214,10 @@ textarea {
     font-weight: 100;
     width: 60px;
     margin-top: 10px;
+}
+
+#note-title-input { 
+    color: whitesmoke;
 }
 
 .hidden {
@@ -199,7 +229,7 @@ input {
         background: transparent;
     }
     border: 1px solid whitesmoke;
-    border-radius: 5px;
+    border-radius: 10px;
     background: transparent;
     padding: 5px;
     font-size: 30px;
