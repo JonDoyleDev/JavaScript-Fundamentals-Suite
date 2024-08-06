@@ -5,7 +5,7 @@ const timezoneEl = document.getElementById('time-zone');
 const currentTempEl = document.getElementById("temp-now");
 const locationEl = document.getElementById("location");
 const weatherForecastEl = document.getElementById('weather-forecast');
-const weatherAPI = "93ca171dab2a3eb1c5f5d46d9d24e11c";
+const weatherAPI = "WEATHER-API-KEY";
 
 setInterval(() => {
     const time = new Date();

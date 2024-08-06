@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const options = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '950a902377msh3045535dc1c8fe3p18a879jsnab391c9891f5',
+                'x-rapidapi-key': 'RAPIDAPI-KEY',
                 'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
             }
         };

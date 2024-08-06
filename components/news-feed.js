@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKeyNews = 'f587118ebb334dd184053d1ed6dcd1e5'; 
-    const apiKeyUnsplash = '7xU0k4aZoCqfVGc6f-PKBgOB_qloMdS87r2EU4CRK5k'; 
+    const apiKeyNews = 'NEWS-API'; 
+    const apiKeyUnsplash = 'UPSPLASH-API-KEY'; 
     const newsList = document.querySelector('.news-list');
     const buttons = document.querySelectorAll('.nav-bar button');
 
